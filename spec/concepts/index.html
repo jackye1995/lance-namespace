@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://lancedb.github.io/lance-namespace/">
+        <link rel="canonical" href="https://lancedb.github.io/lance-namespace/spec/concepts/">
       
       
+        <link rel="prev" href="../..">
       
-        <link rel="next" href="spec/concepts/">
+      
+        <link rel="next" href="../operations/">
       
       
-      <link rel="icon" href="logo/logo.png">
+      <link rel="icon" href="../../logo/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Lance Namespace</title>
+        <title>Concepts - Lance Namespace</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#namespace-concepts" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Lance Namespace" class="md-header__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
+    <a href="../.." title="Lance Namespace" class="md-header__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
       
-  <img src="logo/white.png" alt="logo">
+  <img src="../../logo/white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Concepts
             
           </span>
         </div>
@@ -230,9 +232,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Lance Namespace" class="md-nav__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
+    <a href="../.." title="Lance Namespace" class="md-nav__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
       
-  <img src="logo/white.png" alt="logo">
+  <img src="../../logo/white.png" alt="logo">
 
     </a>
     Lance Namespace
@@ -256,19 +258,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -279,7 +272,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -288,8 +280,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -300,13 +294,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -322,7 +314,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Spec
@@ -333,10 +325,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="spec/concepts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -347,6 +361,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parent-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parent &amp; Child
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root Namespace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Identifier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name-and-identifier-for-root-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name and Identifier for Root Namespace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Level
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -359,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/operations/" class="md-nav__link">
+      <a href="../operations/" class="md-nav__link">
         
   
   
@@ -382,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/implementations/" class="md-nav__link">
+      <a href="../implementations/" class="md-nav__link">
         
   
   
@@ -405,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -503,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/overview/" class="md-nav__link">
+      <a href="../impls/overview/" class="md-nav__link">
         
   
   
@@ -526,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/rest/" class="md-nav__link">
+      <a href="../impls/rest/" class="md-nav__link">
         
   
   
@@ -549,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/dir/" class="md-nav__link">
+      <a href="../impls/dir/" class="md-nav__link">
         
   
   
@@ -572,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/hive/" class="md-nav__link">
+      <a href="../impls/hive/" class="md-nav__link">
         
   
   
@@ -602,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   
@@ -659,6 +756,77 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parent-child" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parent &amp; Child
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root Namespace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Identifier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name-and-identifier-for-root-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name and Identifier for Root Namespace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Level
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -676,12 +844,69 @@
   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<p><img alt="logo" src="logo/wide.png" /></p>
-<p><strong>Lance Namespace Specification</strong> is an open specification on top of the storage-based Lance data format
-to standardize access to a collection of Lance tables (a.k.a. Lance datasets).
-It describes how a metadata service like Apache Hive MetaStore (HMS), Apache Gravitino, Unity Catalog, etc.
-should store and use Lance tables, as well as how ML/AI tools and analytics compute engines should integrate with Lance tables.</p>
+<h1 id="namespace-concepts">Namespace Concepts<a class="headerlink" href="#namespace-concepts" title="Permanent link">&para;</a></h1>
+<h2 id="namespace-definition">Namespace Definition<a class="headerlink" href="#namespace-definition" title="Permanent link">&para;</a></h2>
+<p>A Lance namespace is a centralized repository for discovering, organizing, and managing Lance tables.
+It can either contain a collection of tables, or a collection of Lance namespaces recursively.
+It is designed to encapsulates concepts including namespace, metastore, database, schema, etc.
+that frequently appear in other similar data systems to allow easy integration with any system of any type of object hierarchy.</p>
+<p>Here is an example layout of a Lance namespace:</p>
+<p><img alt="Lance namespace layout" src="../layout.png" /></p>
+<h2 id="parent-child">Parent &amp; Child<a class="headerlink" href="#parent-child" title="Permanent link">&para;</a></h2>
+<p>We use the term <strong>parent</strong> and <strong>child</strong> to describe relationship between 2 objects.
+If namespace A directly contains B, then A is the parent namespace of B, i.e. B is a child of A.
+For examples:</p>
+<ul>
+<li>Namespace <code>ns1</code> contains a <strong>child namespace</strong> <code>ns4</code>. i.e. <code>ns1</code> is the <strong>parent namespace</strong> of <code>ns4</code>.</li>
+<li>Namespace <code>ns2</code> contains a <strong>child table</strong> <code>t2</code>, i.e. <code>t2</code> belongs to <strong>parent namespace</strong> <code>ns2</code>.</li>
+</ul>
+<h2 id="root-namespace">Root Namespace<a class="headerlink" href="#root-namespace" title="Permanent link">&para;</a></h2>
+<p>A root namespace is a namespace that has no parent.
+The root namespace is assumed to always exist and is ready to be connected to by a tool to explore objects in the namespace.
+The lifecycle management (e.g. creation, deletion) of the root namespace is out of scope of this specification.</p>
+<h2 id="object-name">Object Name<a class="headerlink" href="#object-name" title="Permanent link">&para;</a></h2>
+<p>The <strong>name</strong> of an object is a string that uniquely identifies the object within the parent namespace it belongs to.
+The name of any object must be unique among all other objects that share the same parent namespace.
+For examples:</p>
+<ul>
+<li><code>cat2</code>, <code>cat3</code> and <code>cat4</code> are all unique names under the root namespace</li>
+<li><code>t3</code> and <code>t4</code> are both unique names under <code>cat4</code></li>
+</ul>
+<h2 id="object-identifier">Object Identifier<a class="headerlink" href="#object-identifier" title="Permanent link">&para;</a></h2>
+<p>The <strong>identifier</strong> of an object uniquely identifies the object within the root namespace it belongs to.
+The identifier of any object must be unique among all other objects that share the same root namespace.</p>
+<p>Based on the uniqueness property of an object name within its parent namespace,
+an object identifier is the list of object names starting from (not including) the root namespace to (including) the object itself.
+This is also called an <strong>list identifier</strong>.
+For examples:</p>
+<ul>
+<li>the list identifier of <code>cat5</code> is <code>[cat2, cat5]</code></li>
+<li>the list identifier of <code>t1</code> is <code>[cat2, cat5, t1]</code></li>
+</ul>
+<p>The dot (<code>.</code>) symbol is typically used as the delimiter to join all the names to form an <strong>string identifier</strong>,
+but other symbols could also be used if dot is used in the object name.
+For examples:</p>
+<ul>
+<li>the string identifier of <code>cat5</code> is <code>cat2.cat5</code></li>
+<li>the string identifier of <code>t1</code> is <code>cat2.cat5.t1</code></li>
+<li>the string identifier of <code>t3</code> is <code>cat4$t3</code> when using delimiter <code>$</code></li>
+</ul>
+<h2 id="name-and-identifier-for-root-namespace">Name and Identifier for Root Namespace<a class="headerlink" href="#name-and-identifier-for-root-namespace" title="Permanent link">&para;</a></h2>
+<p>The root namespace itself has no name or identifier.
+When represented in code, its name and string identifier is represented by an empty or null string,
+and its list identifier is represented by an empty or null list.</p>
+<p>The actual name and identifier of the root namespace is typically
+assigned by users through some configuration when used in a tool.
+For example, a root namespace can be called <code>cat1</code> in Ray, but called <code>cat2</code> in Apache Spark,
+and they are both configured to connect to the same root namespace.</p>
+<h2 id="namespace-level">Namespace Level<a class="headerlink" href="#namespace-level" title="Permanent link">&para;</a></h2>
+<p>If every table has the same number of namespaces all the way to the root namespace,
+the namespace is called <strong>leveled</strong>. The <a href="#namespace-definition">example above</a> is not leveled
+because <code>t1</code> has 2 namespaces <code>ns1</code> and <code>ns4</code> before root, whereas <code>t2</code> has 1 namespace <code>ns2</code> before root.</p>
+<p>For a leveled namespace, the number of namespaces up to and including the root for any table 
+is referred to as the <strong>number of levels</strong>.
+For example, a <a href="../impls/dir">directory namespace</a> is a 1-level namespace,
+and a <a href="../impls/hive">Hive namespace</a> is a 2-level namespace.</p>
 
 
 
@@ -773,10 +998,10 @@ should store and use Lance tables, as well as how ML/AI tools and analytics comp
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>

@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://lancedb.github.io/lance-namespace/">
+        <link rel="canonical" href="https://lancedb.github.io/lance-namespace/spec/operations/">
       
       
+        <link rel="prev" href="../concepts/">
       
-        <link rel="next" href="spec/concepts/">
+      
+        <link rel="next" href="../implementations/">
       
       
-      <link rel="icon" href="logo/logo.png">
+      <link rel="icon" href="../../logo/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Lance Namespace</title>
+        <title>Operations - Lance Namespace</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#namespace-operations" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Lance Namespace" class="md-header__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
+    <a href="../.." title="Lance Namespace" class="md-header__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
       
-  <img src="logo/white.png" alt="logo">
+  <img src="../../logo/white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Operations
             
           </span>
         </div>
@@ -230,9 +232,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Lance Namespace" class="md-nav__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
+    <a href="../.." title="Lance Namespace" class="md-nav__button md-logo" aria-label="Lance Namespace" data-md-component="logo">
       
-  <img src="logo/white.png" alt="logo">
+  <img src="../../logo/white.png" alt="logo">
 
     </a>
     Lance Namespace
@@ -256,19 +258,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -279,7 +272,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -288,8 +280,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -300,13 +294,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -322,7 +314,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Spec
@@ -336,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/concepts/" class="md-nav__link">
+      <a href="../concepts/" class="md-nav__link">
         
   
   
@@ -356,10 +348,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="spec/operations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Operations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -370,6 +384,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operation-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Versioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation-request-and-response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Request and Response Schema
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -382,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/implementations/" class="md-nav__link">
+      <a href="../implementations/" class="md-nav__link">
         
   
   
@@ -405,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -503,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/overview/" class="md-nav__link">
+      <a href="../impls/overview/" class="md-nav__link">
         
   
   
@@ -526,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/rest/" class="md-nav__link">
+      <a href="../impls/rest/" class="md-nav__link">
         
   
   
@@ -549,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/dir/" class="md-nav__link">
+      <a href="../impls/dir/" class="md-nav__link">
         
   
   
@@ -572,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="spec/impls/hive/" class="md-nav__link">
+      <a href="../impls/hive/" class="md-nav__link">
         
   
   
@@ -602,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   
@@ -659,6 +711,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operation-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Versioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation-request-and-response-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Request and Response Schema
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -676,12 +754,94 @@
   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<p><img alt="logo" src="logo/wide.png" /></p>
-<p><strong>Lance Namespace Specification</strong> is an open specification on top of the storage-based Lance data format
-to standardize access to a collection of Lance tables (a.k.a. Lance datasets).
-It describes how a metadata service like Apache Hive MetaStore (HMS), Apache Gravitino, Unity Catalog, etc.
-should store and use Lance tables, as well as how ML/AI tools and analytics compute engines should integrate with Lance tables.</p>
+<h1 id="namespace-operations">Namespace Operations<a class="headerlink" href="#namespace-operations" title="Permanent link">&para;</a></h1>
+<p>The Lance Namespace Specification defines a list of operations that can be performed against any Lance namespace:</p>
+<table>
+<thead>
+<tr>
+<th>Operation ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ListOperations</td>
+<td>List the operations that are supported by this Lance namespace</td>
+</tr>
+<tr>
+<td>ListNamespaces</td>
+<td>List the names of child namespaces in the parent namespace, or root namespace if parent namespace is not specified</td>
+</tr>
+<tr>
+<td>NamespaceExists</td>
+<td>Check if a namespace exists</td>
+</tr>
+<tr>
+<td>DescribeNamespace</td>
+<td>Describe information of a namespace</td>
+</tr>
+<tr>
+<td>CreateNamespace</td>
+<td>Create a new namespace under a parent namespace, or root namespace if parent namespace is not specified</td>
+</tr>
+<tr>
+<td>AlterNamespace</td>
+<td>Alter information of a namespace</td>
+</tr>
+<tr>
+<td>DropNamespace</td>
+<td>Drop a namespace from its a parent namespace, or root namespace if parent namespace is not specified</td>
+</tr>
+<tr>
+<td>ListTables</td>
+<td>List the names of tables in a namespace</td>
+</tr>
+<tr>
+<td>TableExists</td>
+<td>Check if a table exists</td>
+</tr>
+<tr>
+<td>DescribeTable</td>
+<td>Describe information of a Lance table in the namespace</td>
+</tr>
+<tr>
+<td>CreateTable</td>
+<td>Create a new Lance table under a namespace</td>
+</tr>
+<tr>
+<td>RegisterTable</td>
+<td>Register an existing table at a given storage location to a namespace</td>
+</tr>
+<tr>
+<td>AlterTable</td>
+<td>Alter information of a Lance table</td>
+</tr>
+<tr>
+<td>DropTable</td>
+<td>Drop a table from its namespace</td>
+</tr>
+<tr>
+<td>DeregisterTable</td>
+<td>Deregister a table from its namespace, table content is kept unchanged in storage</td>
+</tr>
+<tr>
+<td>DescribeTransaction</td>
+<td>Describe information of a transaction</td>
+</tr>
+<tr>
+<td>AlterTransaction</td>
+<td>Alter information of a transaction</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operation-versioning">Operation Versioning<a class="headerlink" href="#operation-versioning" title="Permanent link">&para;</a></h2>
+<p>There is no versioning concept within an operation. When backwards incompatible change is introduced,
+a new operation needs to be created, with a naming convention of <code>&lt;operationId&gt;V&lt;version&gt;</code>,
+for example <code>ListNamespacesV2</code>, <code>DescribeTableV3</code>, etc.</p>
+<h2 id="operation-request-and-response-schema">Operation Request and Response Schema<a class="headerlink" href="#operation-request-and-response-schema" title="Permanent link">&para;</a></h2>
+<p>Each operation has a request and response.
+The request and response schema is defined using JSON schema in the 
+<code>components/schemas</code> section of the <a href="https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/lancedb/lance-namespace/refs/heads/main/docs/src/spec/rest.yaml">OpenAPI specification</a>.</p>
 
 
 
@@ -773,10 +933,10 @@ should store and use Lance tables, as well as how ML/AI tools and analytics comp
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>

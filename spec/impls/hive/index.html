@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lance-hms-namespace" class="md-skip">
+        <a href="#lance-hive-namespace" class="md-skip">
           Skip to content
         </a>
       
@@ -328,12 +328,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spec/" class="md-nav__link">
+      <a href="../../concepts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Text
+    Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tool Integration
     
   </span>
   
@@ -454,7 +523,7 @@
   
   
   <span class="md-ellipsis">
-    Rest
+    REST
     
   </span>
   
@@ -504,6 +573,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Apache Hive MetaStore
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -515,6 +597,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-for-implementation-managed-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement for Implementation Managed Table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -592,6 +720,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-for-implementation-managed-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement for Implementation Managed Table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -609,10 +772,28 @@
   
 
 
-<h1 id="lance-hms-namespace">Lance HMS Namespace<a class="headerlink" href="#lance-hms-namespace" title="Permanent link">&para;</a></h1>
-<p>Lance HMS Namespace directly integrates with HMS to offer a 2-level Lance namespace experience.
-The root namespace maps to the entire HMS, which has HMS databases as child namespaces.</p>
-<p>TODO: add more information after implementation is officially added.</p>
+<h1 id="lance-hive-namespace">Lance Hive Namespace<a class="headerlink" href="#lance-hive-namespace" title="Permanent link">&para;</a></h1>
+<p>** Lance Hive Namespace** is an implementation using Apache Hive MetaStore (HMS).
+For more details about HMS, please read <a href="https://hive.apache.org/docs/latest/adminmanual-metastore-administration_27362076/">HMS AdminManual 2.x</a> 
+and <a href="https://hive.apache.org/docs/latest/adminmanual-metastore-3-0-administration_75978150/">HMS AdminManual 3.x</a>. </p>
+<h2 id="namespace-mapping">Namespace Mapping<a class="headerlink" href="#namespace-mapping" title="Permanent link">&para;</a></h2>
+<p>A HMS server can be viewed as the root Lance namespace, and a database in HMS maps to the first level Lance namespace
+to offer a 2-level Lance namespace as a whole.</p>
+<h2 id="table-definition">Table Definition<a class="headerlink" href="#table-definition" title="Permanent link">&para;</a></h2>
+<p>A Lance table should appear as a <a href="https://github.com/apache/hive/blob/branch-4.0/standalone-metastore/metastore-common/src/main/thrift/hive_metastore.thrift#L631">Table object</a> 
+in HMS with the following requirements:</p>
+<ol>
+<li>the <a href="https://github.com/apache/hive/blob/branch-4.0/standalone-metastore/metastore-common/src/main/thrift/hive_metastore.thrift#L643">tableType</a> must be set as <code>EXTERNAL_TABLE</code> to indicate this is not a managed Hive table</li>
+<li>the <a href="https://github.com/apache/hive/blob/branch-4.0/standalone-metastore/metastore-common/src/main/thrift/hive_metastore.thrift#L640">parameters</a> must follow:<ol>
+<li>there is a key <code>table_type</code> set to <code>lance</code> (case insensitive)</li>
+<li>there is a key <code>managed_by</code> set to either <code>storage</code> or <code>impl</code> (case insensitive). If not set, default to <code>storage</code></li>
+<li>there is a key <code>version</code> set to the latest numeric version number of the table. This field will only be respected if <code>managed_by=impl</code> </li>
+</ol>
+</li>
+</ol>
+<h2 id="requirement-for-implementation-managed-table">Requirement for Implementation Managed Table<a class="headerlink" href="#requirement-for-implementation-managed-table" title="Permanent link">&para;</a></h2>
+<p>An update to the implementation managed table must use Hive's atomic update feature (<a href="https://issues.apache.org/jira/browse/HIVE-26882">HIVE-26882</a>)
+and use the <code>version</code> parameter value to perform conditional update through <a href="https://github.com/apache/hive/blob/branch-4.0/standalone-metastore/metastore-common/src/main/thrift/hive_metastore.thrift#L2733">alter_table_with_environment_context</a></p>
 
 
 
