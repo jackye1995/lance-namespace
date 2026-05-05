@@ -41,7 +41,7 @@ public class AlterColumnsEntry {
   @javax.annotation.Nonnull private String path;
 
   public static final String JSON_PROPERTY_DATA_TYPE = "data_type";
-  @javax.annotation.Nonnull private Object dataType;
+  @javax.annotation.Nullable private Object dataType;
 
   public static final String JSON_PROPERTY_RENAME = "rename";
   private JsonNullable<String> rename = JsonNullable.<String>undefined();
@@ -78,26 +78,26 @@ public class AlterColumnsEntry {
     this.path = path;
   }
 
-  public AlterColumnsEntry dataType(@javax.annotation.Nonnull Object dataType) {
+  public AlterColumnsEntry dataType(@javax.annotation.Nullable Object dataType) {
     this.dataType = dataType;
     return this;
   }
 
   /**
-   * New data type for the column using JSON representation (optional)
+   * New data type for the column using JSON representation
    *
    * @return dataType
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DATA_TYPE)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public Object getDataType() {
     return dataType;
   }
 
   @JsonProperty(JSON_PROPERTY_DATA_TYPE)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setDataType(@javax.annotation.Nonnull Object dataType) {
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setDataType(@javax.annotation.Nullable Object dataType) {
     this.dataType = dataType;
   }
 

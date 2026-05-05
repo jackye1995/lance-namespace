@@ -43,9 +43,8 @@ public class AlterColumnsEntry {
   }
 
   /** Constructor with only required parameters */
-  public AlterColumnsEntry(String path, Object dataType) {
+  public AlterColumnsEntry(String path) {
     this.path = path;
-    this.dataType = dataType;
   }
 
   public AlterColumnsEntry path(String path) {
@@ -78,15 +77,14 @@ public class AlterColumnsEntry {
   }
 
   /**
-   * New data type for the column using JSON representation (optional)
+   * New data type for the column using JSON representation
    *
    * @return dataType
    */
-  @NotNull
   @Schema(
       name = "data_type",
-      description = "New data type for the column using JSON representation (optional)",
-      requiredMode = Schema.RequiredMode.REQUIRED)
+      description = "New data type for the column using JSON representation",
+      requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("data_type")
   public Object getDataType() {
     return dataType;
