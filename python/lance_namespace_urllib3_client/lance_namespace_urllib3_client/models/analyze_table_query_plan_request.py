@@ -46,7 +46,7 @@ class AnalyzeTableQueryPlanRequest(BaseModel):
     lower_bound: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Lower bound for search")
     maximum_nprobes: Optional[Annotated[int, Field(strict=True, ge=1)]] = Field(default=None, description="Maximum number of IVF partitions to search. When omitted, all partitions may be searched if needed.")
     minimum_nprobes: Optional[Annotated[int, Field(strict=True, ge=1)]] = Field(default=None, description="Minimum number of IVF partitions to search before adaptive expansion.")
-    nprobes: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="Legacy exact number of IVF partitions to search. Ignored when minimum_nprobes or maximum_nprobes is provided.")
+    nprobes: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="Legacy IVF probe setting passed through independently to Lance.")
     offset: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="Number of results to skip")
     prefilter: Optional[StrictBool] = Field(default=None, description="Whether to apply filtering before vector search")
     refine_factor: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="Refine factor for search")

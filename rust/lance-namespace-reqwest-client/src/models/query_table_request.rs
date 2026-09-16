@@ -54,7 +54,7 @@ pub struct QueryTableRequest {
     /// Minimum number of IVF partitions to search before adaptive expansion.
     #[serde(rename = "minimum_nprobes", skip_serializing_if = "Option::is_none")]
     pub minimum_nprobes: Option<i32>,
-    /// Legacy exact number of IVF partitions to search. Ignored when minimum_nprobes or maximum_nprobes is provided.
+    /// Legacy IVF probe setting passed through independently to Lance.
     #[serde(rename = "nprobes", skip_serializing_if = "Option::is_none")]
     pub nprobes: Option<i32>,
     /// Number of results to skip

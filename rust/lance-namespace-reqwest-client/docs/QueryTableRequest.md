@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **lower_bound** | Option<**f32**> | Lower bound for search | [optional]
 **maximum_nprobes** | Option<**i32**> | Maximum number of IVF partitions to search. When omitted, all partitions may be searched if needed. | [optional]
 **minimum_nprobes** | Option<**i32**> | Minimum number of IVF partitions to search before adaptive expansion. | [optional]
-**nprobes** | Option<**i32**> | Legacy exact number of IVF partitions to search. Ignored when minimum_nprobes or maximum_nprobes is provided. | [optional]
+**nprobes** | Option<**i32**> | Legacy IVF probe setting passed through independently to Lance. | [optional]
 **offset** | Option<**i32**> | Number of results to skip | [optional]
 **prefilter** | Option<**bool**> | Whether to apply filtering before vector search | [optional]
 **refine_factor** | Option<**i32**> | Refine factor for search | [optional]

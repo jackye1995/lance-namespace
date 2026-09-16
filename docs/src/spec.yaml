@@ -3313,7 +3313,7 @@ components:
         nprobes:
           type: integer
           minimum: 0
-          description: Legacy exact number of IVF partitions to search. Ignored when minimum_nprobes or maximum_nprobes is provided.
+          description: Legacy IVF probe setting passed through independently to Lance.
         offset:
           type: integer
           minimum: 0
@@ -5232,7 +5232,7 @@ components:
         nprobes:
           type: integer
           minimum: 0
-          description: Legacy exact number of IVF partitions to search. Ignored when minimum_nprobes or maximum_nprobes is provided.
+          description: Legacy IVF probe setting passed through independently to Lance.
         offset:
           type: integer
           minimum: 0

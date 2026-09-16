@@ -518,8 +518,7 @@ public class AnalyzeTableQueryPlanRequest {
   }
 
   /**
-   * Legacy exact number of IVF partitions to search. Ignored when minimum_nprobes or
-   * maximum_nprobes is provided. minimum: 0
+   * Legacy IVF probe setting passed through independently to Lance. minimum: 0
    *
    * @return nprobes
    */
